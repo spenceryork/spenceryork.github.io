@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(132, 172, 201);
+    margin: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+}
+
+.location {
+    margin: 0;
+}
+
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    padding-top: 0.5em;
+}
+
+
+.banner {
+    text-align: center;
+    background-color: white;
+}
+
+.topbanner {
+    background-color: white;
+    padding-bottom:;
+    background-color: white;
+    margin-bottom: 0em;
+}
+
+nav div {
+    padding: 1em;
+}
