@@ -1,13 +1,18 @@
 body {
-    background-color: rgb(132, 172, 201);
+    background-color: white;
     margin: 0px;
+    background-image: url(nashville.jpeg);
 }
 
 nav {
     display: flex;
     justify-content: center;
-    background-color: white;
     width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
 }
 
 .location {
@@ -19,21 +24,35 @@ h1 {
     margin-top: 0;
     margin-bottom: 0.25em;
     padding-top: 0.5em;
+    color: black;
+}
+
+.banner p {
+    color: darkgoldenrod;
 }
 
 
 .banner {
     text-align: center;
-    background-color: white;
 }
 
 .topbanner {
-    background-color: white;
-    padding-bottom:;
-    background-color: white;
+    background: url(images/nash.png);
+    background-size: cover;
     margin-bottom: 0em;
 }
 
 nav div {
     padding: 1em;
+}
+
+/*** Blog page ***/
+
+.blog-posts {
+    display: flex;
+}
+
+.b-article {
+    margin: 2em 4em;
+    height: 10em;
 }
