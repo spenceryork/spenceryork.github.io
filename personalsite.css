@@ -50,9 +50,15 @@ nav div {
 
 .blog-posts {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .b-article {
-    margin: 2em 4em;
-    height: 10em;
+    border: 1px grey solid;
+    width: 25%;
+    margin: 1.5em;
+    padding: 1em;
+
 }
