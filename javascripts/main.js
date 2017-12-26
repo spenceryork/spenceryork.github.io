@@ -29,8 +29,9 @@ let blogs = [
 ]
 
 blogs.forEach(function(blog){
-    let blogHolder = document.createElement("div");
-    let blogString = `<div class="b-article">
+    let blogHolder = document.createElement("article");
+    blogHolder.setAttribute("class", "b-article")
+    let blogString = `
     <h4>${blog.title}</h4>
     <p>${blog.date}</p>
     <p>${blog.content}</p>`
