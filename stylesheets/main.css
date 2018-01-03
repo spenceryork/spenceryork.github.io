@@ -1,0 +1,51 @@
+body {
+  background-color: white;
+  margin: 0px;
+  background-image: url(nashville.jpeg); }
+
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+
+nav a {
+  text-decoration: none;
+  color: white; }
+
+.location {
+  margin: 0; }
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+  padding-top: 0.5em;
+  color: black; }
+
+.banner p {
+  color: darkgoldenrod; }
+
+.banner {
+  text-align: center; }
+
+.topbanner {
+  background: url(images/nash.png);
+  background-size: cover;
+  margin-bottom: 0em; }
+
+nav div {
+  padding: 1em; }
+
+/*** Blog page ***/
+.blog-posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.b-article {
+  border: 1px grey solid;
+  width: 25%;
+  margin: 1.5em;
+  padding: 1em; }
+
+/*# sourceMappingURL=main.css.map */
