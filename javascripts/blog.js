@@ -25,7 +25,19 @@ let blog = [
         title: "My Blog 5",
         date: "January 28th, 2018",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare mauris ex. Nam viverra urna nisi, a iaculis leo interdum vitae. Nulla euismod, neque vitae dignissim vehicula, magna nisl laoreet tortor, vitae fringilla mi leo sed diam. Cras molestie est quis sem facilisis, sit amet varius ex elementum. Sed eget elit magna. Proin porttitor, nulla ut bibendum mollis, elit augue eleifend dui, et molestie tellus quam at elit. Suspendisse cursus felis a diam dictum, quis vulputate orci eleifend. Vestibulum maximus ligula non porttitor tincidunt. Fusce vulputate arcu sit amet lobortis laoreet. Donec iaculis urna ipsum, a sollicitudin eros varius at. Donec non consequat arcu, eu iaculis diam. Donec sed diam elit. Vestibulum laoreet finibus condimentum. Vivamus finibus accumsan augue, sed tempus lorem eleifend vel. Aenean tempus convallis magna, vel varius mauris consequat sed."   
-    }
+    },
+    {
+        title: "My Blog 6",
+        date: "February 28th, 2018",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare mauris ex. Nam viverra urna nisi, a iaculis leo interdum vitae. Nulla euismod, neque vitae dignissim vehicula, magna nisl laoreet tortor, vitae fringilla mi leo sed diam. Cras molestie est quis sem facilisis, sit amet varius ex elementum. Sed eget elit magna. Proin porttitor, nulla ut bibendum mollis, elit augue eleifend dui, et molestie tellus quam at elit. Suspendisse cursus felis a diam dictum, quis vulputate orci eleifend. Vestibulum maximus ligula non porttitor tincidunt. Fusce vulputate arcu sit amet lobortis laoreet. Donec iaculis urna ipsum, a sollicitudin eros varius at. Donec non consequat arcu, eu iaculis diam. Donec sed diam elit. Vestibulum laoreet finibus condimentum. Vivamus finibus accumsan augue, sed tempus lorem eleifend vel. Aenean tempus convallis magna, vel varius mauris consequat sed."   
+    },
+    {
+        title: "My Blog 7",
+        date: "March 8th, 2018",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare mauris ex. Nam viverra urna nisi, a iaculis leo interdum vitae. Nulla euismod, neque vitae dignissim vehicula, magna nisl laoreet tortor, vitae fringilla mi leo sed diam. Cras molestie est quis sem facilisis, sit amet varius ex elementum. Sed eget elit magna. Proin porttitor, nulla ut bibendum mollis, elit augue eleifend dui, et molestie tellus quam at elit. Suspendisse cursus felis a diam dictum, quis vulputate orci eleifend. Vestibulum maximus ligula non porttitor tincidunt. Fusce vulputate arcu sit amet lobortis laoreet. Donec iaculis urna ipsum, a sollicitudin eros varius at. Donec non consequat arcu, eu iaculis diam. Donec sed diam elit. Vestibulum laoreet finibus condimentum. Vivamus finibus accumsan augue, sed tempus lorem eleifend vel. Aenean tempus convallis magna, vel varius mauris consequat sed."   
+    },
+
+    
 ];
 
 // Store the info in local storage
@@ -40,12 +52,57 @@ let extractedBlog = JSON.parse(localStorage.getItem('blog'));
 // Load that string into the DOM
 
 extractedBlog.forEach( (blog) => {
-    let blogHolder = document.createElement("article");
-    blogHolder.setAttribute("class", "b-article");
-    let blogString = `
+    $("#blog-holder").append( `
+    <article class="b-article">
     <h4>${blog.title}</h4>
     <p>${blog.date}</p>
-    <p>${blog.content}</p>`;
-    blogHolder.innerHTML = blogString;
-    document.getElementById("blog-holder").appendChild(blogHolder);
+    <p>${blog.content}</p>
+    </article>`);
 });
+
+
+// FOLLOWED ALONG WITH A YOUTUBE VIDEO JQUERY ON PAGINATION "jQuery Tutorial - Pagination" URL: https://www.youtube.com/watch?v=Xznn-ggD0GU
+// Pagination
+
+// Dynamically figring out how many blogs I have
+let numberOfBlogs = $("#blog-holder .b-article").length;
+
+// Setting my page limit
+let limitPerPage = 5;
+
+//Hiding any number of blogs that are above the limit per page
+$("#blog-holder .b-article:gt(" + (limitPerPage - 1) + ")").hide();
+
+// Setting the total number of pages based on the number of blogs I have
+let totalPages = Math.ceil(numberOfBlogs / limitPerPage);
+
+// Appending the first button that will always appear
+$('.pagination').append("<li class='page-item currentPage active'><a class='page-link' href='#'>" + 1 + "</a></li>");
+
+//Looping over the number of total pages to determine how many page buttons there needs to be
+for (let i = 2; i <= totalPages; i++ ) {
+    $('.pagination').append("<li class='page-item currentPage'><a class='page-link' href='#'>" + i + "</a></li>");
+}
+
+
+// This function controls the "active" class for each button clicked and the blogs that need to appear on each page.
+$('.pagination li.currentPage').on('click', function() {
+    if ($(this).hasClass("active")) {
+        return false;
+    } else {
+        console.log("this when clicked", event.target);
+        let currentPageClicked = $(this).index() + 1;
+        console.log("currentPageClicked", currentPageClicked);
+        console.log("currentPageClicked", this);
+
+        $('.pagination li').removeClass("active");
+        $(this).addClass("active");
+        $("#blog-holder .b-article").hide();
+
+        let overallTotal = limitPerPage * currentPageClicked;
+        for (let i = overallTotal - limitPerPage; i < overallTotal; i++) {
+            $("#blog-holder .b-article:eq(" + i + ")").show();
+        }
+    }
+});
+
