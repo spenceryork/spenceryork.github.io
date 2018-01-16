@@ -1,7 +1,6 @@
 body {
   background-color: white;
-  margin: 0px;
-  background-image: url(nashville.jpeg); }
+  margin: 0px; }
 
 nav {
   display: flex;
@@ -28,7 +27,7 @@ h1 {
   text-align: center; }
 
 .topbanner {
-  background: url(images/nash.png);
+  background: url(../images/nash.png);
   background-size: cover;
   margin-bottom: 0em; }
 
