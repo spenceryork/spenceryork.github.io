@@ -1,7 +1,7 @@
 "use strict";
 
 console.log("is this working");
-const resume = require('./resume');
+// const resume = require('./resume');
 
 // let blogs = [
 //     {

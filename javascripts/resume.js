@@ -26,8 +26,6 @@ let resume = [
 ];
 
 let JSONResume = JSON.stringify(resume);
-console.log("JSONResume", JSONResume);
-
 localStorage.setItem('resume', JSONResume);
 
 

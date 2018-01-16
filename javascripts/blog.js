@@ -28,7 +28,24 @@ let blog = [
     }
 ];
 
+// Store the info in local storage
 let JSONBlog = JSON.stringify(blog);
-console.log("JSONBlog", JSONBlog);
-
 localStorage.setItem('blog', JSONBlog);
+
+// Extract the blog article data
+let extractedBlog = JSON.parse(localStorage.getItem('blog'));
+// console.log("extractedBlog", extractedBlog);
+
+// Transform each blog article into an <article> element string.
+// Load that string into the DOM
+
+extractedBlog.forEach( (blog) => {
+    let blogHolder = document.createElement("article");
+    blogHolder.setAttribute("class", "b-article");
+    let blogString = `
+    <h4>${blog.title}</h4>
+    <p>${blog.date}</p>
+    <p>${blog.content}</p>`;
+    blogHolder.innerHTML = blogString;
+    document.getElementById("blog-holder").appendChild(blogHolder);
+});

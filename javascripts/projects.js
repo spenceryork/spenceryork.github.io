@@ -25,6 +25,4 @@ let projects = [
 ];
 
 let JSONProjects = JSON.stringify(projects);
-console.log("JSONProjects", JSONProjects);
-
 localStorage.setItem('projects', JSONProjects);
