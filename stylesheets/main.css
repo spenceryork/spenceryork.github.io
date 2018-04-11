@@ -28,7 +28,7 @@ h1 {
   text-align: center; }
 
 .topbanner {
-  background: url(../images/meadow.jpg);
+  background: url(../images/meadow.bw.jpg);
   background-size: cover;
   height: 100%;
   min-height: 100vh;
@@ -53,5 +53,9 @@ nav div {
 img {
   height: 650px;
   width: 420px; }
+
+.about {
+  display: flex;
+  flex-direction: row; }
 
 /*# sourceMappingURL=main.css.map */
