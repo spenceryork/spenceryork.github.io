@@ -69,14 +69,16 @@ nav div {
 }
 
 img {
-    height: 650px;
-    width: 420px;
+    // height: 650px;
+    // width: 420px;
+    max-width: 100%;
+    height: auto;
 }
 
-.about {
-    display: flex;
-    flex-direction: row;
-}
+// .about {
+//     display: flex;
+//     flex-direction: row;
+// }
 
 .factIcon {
     height: 50px;
@@ -103,23 +105,29 @@ img {
 }
 
 .project {
-    // display: flex;
-    // flex-direction: row;
-    // align-items: center;
     .projectInfo {
-        width: 40%;
+
     }
     img {
-        width: 400px;
-        height: 300px;
+        // width: 400px;
+        // height: 300px;
+        max-width: 100%;
+        height: auto;
     }
 }
 
 
-@media only screen and (max-width: 600px) {
+@media (min-width: 576px) {
     .project {
+        width: 100%;
+        justify-content: center;
         .projectInfo {
-            width: 90%;
+            margin: auto;
+        }
+        img {
+            margin: auto;
+            width: 100%;
+            height: auto;
         }
     }
 }
