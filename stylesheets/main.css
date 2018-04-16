@@ -52,7 +52,7 @@ nav div {
 
 img {
   max-width: 100%;
-  height: auto; }
+  max-height: 650px; }
 
 .factIcon {
   height: 50px;
@@ -75,8 +75,8 @@ img {
   flex-flow: row wrap; }
 
 .project img {
-  max-width: 100%;
-  height: auto; }
+  max-height: 300px;
+  max-width: 100%; }
 
 @media (min-width: 576px) {
   .project {
