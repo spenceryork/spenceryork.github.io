@@ -78,4 +78,14 @@ img {
   width: 60%;
   flex-flow: row wrap; }
 
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .project .projectInfo {
+    width: 40%; }
+  .project img {
+    width: 400px;
+    height: 300px; }
+
 /*# sourceMappingURL=main.css.map */
