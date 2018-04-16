@@ -58,27 +58,23 @@ img {
   height: 50px;
   width: 50px; }
 
-.tech img {
-  height: 100px;
-  width: 100px; }
+.tech {
+  text-align: center;
+  margin: 20px; }
+  .tech img {
+    height: 100px;
+    width: 100px; }
 
 .fact {
   display: flex;
   flex-direction: row;
   align-items: center; }
 
-.techContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 60%;
-  flex-flow: row wrap; }
-
 .project img {
-  max-height: 300px;
-  max-width: 100%; }
+  width: 100%;
+  max-height: 350px; }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .project {
     width: 100%;
     justify-content: center; }
@@ -87,6 +83,17 @@ img {
     .project img {
       margin: auto;
       width: 100%;
-      height: auto; } }
+      height: auto; }
+
+  .tech {
+    text-align: center;
+    margin: 10px; }
+    .tech h3 {
+      font-size: 15px;
+      text-align: center; }
+    .tech img {
+      height: 50px;
+      width: 50px;
+      margin: auto; } }
 
 /*# sourceMappingURL=main.css.map */

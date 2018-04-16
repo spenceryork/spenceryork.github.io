@@ -69,25 +69,23 @@ nav div {
 }
 
 img {
-    // height: 650px;
-    // width: 420px;
     max-width: 100%;
     max-height: 650px;
 }
 
-// .about {
-//     display: flex;
-//     flex-direction: row;
-// }
 
 .factIcon {
     height: 50px;
     width: 50px;
 }
 
-.tech img{
-    height: 100px;
-    width: 100px;
+.tech {
+    text-align: center;
+    margin: 20px;
+        img {
+        height: 100px;
+        width: 100px;
+    }
 }
 
 .fact {
@@ -96,28 +94,28 @@ img {
     align-items: center;
 }
 
-.techContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 60%;
-    flex-flow: row wrap; 
-}
+// .techContainer {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     width: 60%;
+//     flex-flow: row wrap; 
+// }
 
 .project {
     .projectInfo {
 
     }
     img {
-        // width: 400px;
-        max-height: 300px;
-        max-width: 100%;
+        // max-width: 400px;
+        width: 100%;
+        max-height: 350px;
         // height: auto;
     }
 }
 
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
     .project {
         width: 100%;
         justify-content: center;
@@ -128,6 +126,20 @@ img {
             margin: auto;
             width: 100%;
             height: auto;
+        }
+    }
+
+    .tech {
+        text-align: center;
+        h3 {
+            font-size: 15px;
+            text-align: center;
+        }
+        margin: 10px;
+            img {
+            height: 50px;
+            width: 50px;
+            margin: auto;
         }
     }
 }
