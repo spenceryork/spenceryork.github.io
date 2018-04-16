@@ -87,3 +87,17 @@ img {
     height: 100px;
     width: 100px;
 }
+
+.fact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.techContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    flex-flow: row wrap; 
+}
