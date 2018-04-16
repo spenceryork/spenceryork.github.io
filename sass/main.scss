@@ -103,14 +103,23 @@ img {
 }
 
 .project {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
     .projectInfo {
         width: 40%;
     }
     img {
         width: 400px;
         height: 300px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .project {
+        .projectInfo {
+            width: 90%;
+        }
     }
 }
