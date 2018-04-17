@@ -15,6 +15,7 @@ nav {
     color: rgb(164, 187, 199) !important;
     font-size: 1.15rem;
     font-weight: normal;
+    font-family: 'Abel', sans-serif;
     a:hover {
         font-weight: bold;
     }
@@ -30,9 +31,11 @@ nav {
     h1 {
         color: rgb(218, 216, 216);
         font-size: 4rem;
+        font-family: 'Signika', sans-serif;
     }
     h3 {
         color: rgb(218, 216, 216);
+        font-family: 'Abel', sans-serif;
     }
 }
 
@@ -42,6 +45,7 @@ h1 {
     margin-bottom: 0.25em;
     padding-top: 0.5em;
     color: black;
+    font-family: 'Abel', sans-serif;
 }
 
 .banner p {

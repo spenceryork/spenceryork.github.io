@@ -12,7 +12,8 @@ nav {
   text-decoration: none;
   color: #a4bbc7 !important;
   font-size: 1.15rem;
-  font-weight: normal; }
+  font-weight: normal;
+  font-family: 'Abel', sans-serif; }
   .nav-item a a:hover {
     font-weight: bold; }
 
@@ -24,15 +25,18 @@ nav {
   margin-left: 50px; }
   .homeBanner h1 {
     color: #dad8d8;
-    font-size: 4rem; }
+    font-size: 4rem;
+    font-family: 'Signika', sans-serif; }
   .homeBanner h3 {
-    color: #dad8d8; }
+    color: #dad8d8;
+    font-family: 'Abel', sans-serif; }
 
 h1 {
   margin-top: 0;
   margin-bottom: 0.25em;
   padding-top: 0.5em;
-  color: black; }
+  color: black;
+  font-family: 'Abel', sans-serif; }
 
 .banner p {
   color: darkgoldenrod; }
