@@ -10,13 +10,30 @@ nav {
     width: 100%;
 }
 
-nav a {
+.nav-item a {
     text-decoration: none;
-    color: white;
+    color: rgb(164, 187, 199) !important;
+    font-size: 1.15rem;
+    font-weight: normal;
+    a:hover {
+        font-weight: bold;
+    }
 }
 
 .location {
     margin: 0;
+}
+
+.homeBanner {
+    margin-top: 40px;
+    margin-left: 50px;
+    h1 {
+        color: rgb(218, 216, 216);
+        font-size: 4rem;
+    }
+    h3 {
+        color: rgb(218, 216, 216);
+    }
 }
 
 
@@ -92,6 +109,12 @@ img {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    img {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
 }
 
 // .techContainer {

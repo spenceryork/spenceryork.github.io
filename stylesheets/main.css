@@ -8,12 +8,25 @@ nav {
   justify-content: center;
   width: 100%; }
 
-nav a {
+.nav-item a {
   text-decoration: none;
-  color: white; }
+  color: #a4bbc7 !important;
+  font-size: 1.15rem;
+  font-weight: normal; }
+  .nav-item a a:hover {
+    font-weight: bold; }
 
 .location {
   margin: 0; }
+
+.homeBanner {
+  margin-top: 40px;
+  margin-left: 50px; }
+  .homeBanner h1 {
+    color: #dad8d8;
+    font-size: 4rem; }
+  .homeBanner h3 {
+    color: #dad8d8; }
 
 h1 {
   margin-top: 0;
@@ -68,7 +81,12 @@ img {
 .fact {
   display: flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .fact img {
+    margin-right: 15px;
+    margin-left: 15px; }
 
 .project img {
   width: 100%;
